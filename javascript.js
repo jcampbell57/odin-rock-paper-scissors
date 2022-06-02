@@ -5,10 +5,9 @@ function computerPlay(selection) {
    return selection[index];
 }  
 
-let computerSelection = computerPlay(selection);
-console.log(computerSelection)
-
 let playerSelection = "Cockroach";
+let playerScore = 0;
+let computerScore = 0;
 
 function playRound (playerSelection, computerSelection) {
    if (playerSelection == computerSelection) {
@@ -30,6 +29,42 @@ function playRound (playerSelection, computerSelection) {
    }
 } 
 
-let result = playRound(playerSelection, computerSelection);
+function game () {
+   let computerSelection = computerPlay(selection);
+   console.log("Player choice: " + playerSelection)
+   console.log("Computer choice: " + computerSelection)
+   if (playerSelection == "Boot" && computerSelection == "Cockroach") {
+      playerScore++
+   } else if (playerSelection == "Boot" && computerSelection == "Nuclear Bomb") {
+      computerScore++
+   } else if (playerSelection == "Cockroach" && computerSelection == "Nuclear Bomb") {
+      playerScore++
+   } else if (playerSelection == "Cockroach" && computerSelection == "Boot") {
+      computerScore++
+   } else if (playerSelection == "Nuclear Bomb" && computerSelection == "Boot") {
+      playerScore++
+   } else if (playerSelection == "Nuclear Bomb" && computerSelection == "Cockroach") {
+      computerScore++
+   } 
+   let result = playRound(playerSelection, computerSelection);
+   console.log(result);
+}   
 
-console.log(result);
+for (let i=0; i<5; i++) {
+      game();
+      console.log("Player Score: " + playerScore)
+      console.log("Computer Score: " + computerScore)
+      console.log("")
+   } 
+   
+   if (i=5) {
+      if (playerScore > computerScore) {
+         let winner = "Player"
+         console.log("Game over, " + winner + " wins!")
+      } else if (playerScore < computerScore) {
+         let winner = "Computer"
+         console.log("Game over, " + winner + " wins!")
+     } else {
+         console.log("Game over, It's a tie!")
+      }
+   }
