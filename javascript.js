@@ -1,14 +1,17 @@
 let  selection = [ "Boot", "Cockroach", "Nuclear Bomb" ]
 
+//random computer selection choice
 function computerPlay(selection) {
    var index = Math.floor(Math.random() * selection.length);
    return selection[index];
 }  
 
+//default values
 let playerSelection = "Cockroach";
 let playerScore = 0;
 let computerScore = 0;
 
+//winner declaration
 function playRound (playerSelection, computerSelection) {
    if (playerSelection == computerSelection) {
       return "Tie!"
@@ -29,6 +32,7 @@ function playRound (playerSelection, computerSelection) {
    }
 } 
 
+//choice declaration & points
 function game () {
    let computerSelection = computerPlay(selection);
    console.log("Player choice: " + playerSelection)
@@ -50,6 +54,7 @@ function game () {
    console.log(result);
 }   
 
+//five game loop
 for (let i=0; i<5; i++) {
       game();
       console.log("Player Score: " + playerScore)
@@ -57,14 +62,15 @@ for (let i=0; i<5; i++) {
       console.log("")
    } 
    
-   if (i=5) {
-      if (playerScore > computerScore) {
-         let winner = "Player"
-         console.log("Game over, " + winner + " wins!")
-      } else if (playerScore < computerScore) {
-         let winner = "Computer"
-         console.log("Game over, " + winner + " wins!")
-     } else {
-         console.log("Game over, It's a tie!")
-      }
+//Game terminates after five rounds.
+if (i=5) {
+   if (playerScore > computerScore) {
+      let winner = "Player"
+      console.log("Game over, " + winner + " wins!")
+   } else if (playerScore < computerScore) {
+      let winner = "Computer"
+      console.log("Game over, " + winner + " wins!")
+  } else {
+      console.log("Game over, It's a tie!")
    }
+}
