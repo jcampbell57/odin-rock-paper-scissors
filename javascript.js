@@ -77,9 +77,9 @@ function game () {
                   computerScore = 0;
                } else {
                   console.log("Game over, Computer wins!")
-                  gameOver.style.color = 'red';
+                  gameOver.style.color = 'darkred';
                   gameOver.style.fontWeight = 'bold';
-                  gameOver.textContent = 'Game over, Player wins!';
+                  gameOver.textContent = 'Game over, Computer wins!';
                   playerScore = 0;
                   computerScore = 0;
                }
