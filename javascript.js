@@ -27,6 +27,7 @@ function game () {
          button.addEventListener('click', () => {
             
             //reset score
+            gameOver.style.fontWeight = '300';
             gameOver.style.color = 'black';
             gameOver.textContent = 'Choose again!';
 
@@ -70,12 +71,14 @@ function game () {
                if(playerScore == 5) {
                   console.log("Game over, Player wins!")
                   gameOver.style.color = 'green';
+                  gameOver.style.fontWeight = 'bold';
                   gameOver.textContent = 'Game over, Player wins!';
                   playerScore = 0;
                   computerScore = 0;
                } else {
                   console.log("Game over, Computer wins!")
                   gameOver.style.color = 'red';
+                  gameOver.style.fontWeight = 'bold';
                   gameOver.textContent = 'Game over, Player wins!';
                   playerScore = 0;
                   computerScore = 0;
