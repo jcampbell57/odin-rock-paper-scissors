@@ -2,7 +2,7 @@
 
 ## Project info
 
-For this project, I have recreated a fun variant of the classic Rock, Paper, Scissors game! This game is played against AI over the course of five rounds. 
+A fun variant of the classic Rock, Paper, Scissors game! This game is played against AI over the course of five rounds. Ther purpose of this project is to practice basic JavaScript concepts and implement a functioning user interface.
 
 Initial project description can be found [here](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors).
 
